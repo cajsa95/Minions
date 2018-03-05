@@ -19,3 +19,7 @@ $("#text").on("keyup", function(){
     $("#text").removeClass("is-invalid");
   }
 });
+
+var translated = 'Banana I want a banana';
+
+document.getElementById('play').addEventListener("click", function(){responsiveVoice.speak(translated, "Indonesian Female", {pitch: 1.7}, {volume: 1});}, false);
