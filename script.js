@@ -9,11 +9,9 @@ $("#translate-form").on("submit", function(e){
     $("#text").addClass("is-invalid");
     return false;
   }
-
-
 });
 
-
+//när användaren börjar skriva i textfältet så ska felmeddelandet försvinna
 $("#text").on("keyup", function(){
   if($(this).val() == ""){
     $("#text").addClass("is-invalid");
