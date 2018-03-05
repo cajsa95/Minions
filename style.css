@@ -18,3 +18,12 @@ div.card{
 div.card >img{
   cursor: pointer;
 }
+
+#minion_speech{
+  float: right;
+}
+
+#minion_speech > img{
+  width: 50%;
+  height: 20%;
+}
