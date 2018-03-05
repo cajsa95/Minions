@@ -4,6 +4,14 @@ $("#translate-form").on("submit", function(e) {
     //hämtar texten som användaren skrivit in och sparar i en variabel
     var text = $("#text").val();
 
+    //översättnings-api:
+    $.ajax({
+        url: "http://api.funtranslations.com/translate/minion.json",
+        type: "POST",
+        dataType: "JSON",
+
+    });
+
     //om användaren inte angivit någon text läggs följande klass för felmeddelande på
     if (text == "") {
         $("#text").addClass("is-invalid");
