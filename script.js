@@ -8,13 +8,15 @@ $("#translate-form").submit(function(e) {
 
     //översättnings-api:
     $.ajax({
-        url: "http://api.funtranslations.com/translate/minion.json?text=" + userInput,
+        url: "http://api.funtranslations.com/translate/minion.json?text=" + userInput + "&api_key=4teLe8_dp3MVa_Y7FnRtbQeF",
         type: "POST",
         dataType: "JSON"
 
     }).done(function(data) {
         console.log("Funkar");
-        //$("#translated-text").text(data.value.userInput);
+        $("#translated-text").text(data.contents.translated);
+
+        //console.log(data.contents.translated);
 
     }).fail(function(data) {
         console.log("Funkar INTE");
