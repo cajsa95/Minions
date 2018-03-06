@@ -1,30 +1,38 @@
-$("#translate-form").on("submit", function(e) {
+$("#translate-form").submit(function(e) {
     e.preventDefault();
 
     //hämtar texten som användaren skrivit in och sparar i en variabel
-    var text = $("#text").val();
+    var userInput = $("#user-text").val();
+
+    console.log(userInput);
 
     //översättnings-api:
     $.ajax({
-        url: "http://api.funtranslations.com/translate/minion.json",
+        url: "http://api.funtranslations.com/translate/minion.json?text=" + userInput,
         type: "POST",
-        dataType: "JSON",
+        dataType: "JSON"
 
+    }).done(function(data) {
+        console.log("Funkar");
+        //$("#translated-text").text(data.value.userInput);
+
+    }).fail(function(data) {
+        console.log("Funkar INTE");
     });
 
     //om användaren inte angivit någon text läggs följande klass för felmeddelande på
-    if (text == "") {
-        $("#text").addClass("is-invalid");
+    if (userInput == "") {
+        $("#user-text").addClass("is-invalid");
         return false;
-    }
+    };
 });
 
 //när användaren börjar skriva i textfältet så ska felmeddelandet försvinna
-$("#text").on("keyup", function() {
+$("#user-text").on("keyup", function() {
     if ($(this).val() == "") {
-        $("#text").addClass("is-invalid");
+        $("#user-text").addClass("is-invalid");
     } else {
-        $("#text").removeClass("is-invalid");
+        $("#user-text").removeClass("is-invalid");
     }
 });
 
