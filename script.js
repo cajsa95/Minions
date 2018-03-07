@@ -41,3 +41,16 @@ $("#user-text").on("keyup", function() {
 var translated = 'Banana I want a banana';
 
 document.getElementById('play').addEventListener("click", function() { responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 }); }, false);
+
+$("#minion-quote").on("click", function() {
+  console.log("hej");
+
+  var q = quotes.Quotes;
+  console.log(q);
+
+  for( var i=0; i < q.length; i++){
+    console.log(q[i].Quote);
+  }
+
+
+});
