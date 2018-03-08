@@ -44,9 +44,10 @@ var translated = 'Banana I want a banana';
 //väljer ut Id och vid klick körs speak-funktionen med valda parametrar
 document.getElementById('play').addEventListener("click", function() { responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 }); }, false);
 
+//hämtar quotes i json-filen
 $("#minion-quote").on("click", function(e){
   console.log("hej");
-  
+
   $.ajax({
     url: "quotes.json",
     contentType: false,
