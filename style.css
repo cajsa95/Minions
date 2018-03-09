@@ -1,15 +1,25 @@
 .container {
+    width: 100%;
     text-align: center;
     background-color: rgb(255, 245, 108);
     border: 10px solid transparent;
     border-radius: 100px;
     padding: 1%;
     margin-top: 2%;
-    margin-left: 50px;
-    margin-right: 50px;
     border-width: 1%;
-    box-sizing: border-box;
     box-shadow: 10px 10px 10px 10px grey blur 21px;
+}
+
+.item {
+    background-color: white;
+    margin-bottom: 15px;
+    border-style: dotted;
+    border-color: blue;
+    border-radius: 200px;
+}
+
+translate-form {
+    justify-content: center;
 }
 
 
@@ -48,27 +58,29 @@ footer>img {
     line-height: 100px;
 }
 
-#text-field {
-    text-align: center;
+#user-text {
+    justify-content: center;
+    margin: 15px auto;
+    display: block;
+    position: relative;
 }
 
 div.card {
     border: none;
 }
 
-div.card>img {
+.press {
     cursor: pointer;
-}
-
-figure {
-    display: block;
+    justify-content: center;
 }
 
 #minion_speech {
-    clear: both;
+    display: block;
+    margin: 0px auto;
+    position: relative;
 }
 
 #minion_speech>img {
-    width: 50%;
-    height: 50%;
+    width: 100px;
+    height: 100px;
 }
