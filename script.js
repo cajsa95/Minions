@@ -13,11 +13,18 @@ $("#translate-form").submit(function(e) {
         dataType: "JSON"
 
     }).done(function(data) {
-        console.log("Översättning funkar");
+        console.log("Funkar");
         $("#translated-text").text(data.contents.translated);
+        //sparar användarens input i varaiabeln
+        var translated = data.contents.translated;
+        console.log(translated);
+        //läser upp användarens input
+        document.getElementById('play').addEventListener("click", function() { responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 }); }, false);
+
+
 
     }).fail(function(data) {
-        console.log("Översättning funkar INTE");
+        console.log("Funkar INTE");
     });
 
     //om användaren inte angivit någon text läggs följande klass för felmeddelande på
@@ -36,27 +43,23 @@ $("#user-text").on("keyup", function() {
     }
 });
 
-var translated = 'Banana I want a banana';
-
-document.getElementById('play').addEventListener("click", function() { responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 }); }, false);
 
 //För att få fram ett random citat
 $("#minion-quote").on("click", function() {
-    var q = quotes.Quotes;
+  var q = quotes.Quotes;
 
-    //Denna tar ut ETT random citat ur
-    var quote = q[Object.keys(q)[Math.floor(Math.random() * Object.keys(q).length)]];
-    console.log(quote);
+  //Denna tar ut ETT random citat ur
+  var quote = q[Object.keys(q)[Math.floor(Math.random()*Object.keys(q).length)]];
+  console.log(quote);
 
-    /*
-    //Denna loopar ut alla citaten från filen
-    for( var i=0; i < q.length; i++){
-      console.log(q[i].Quote);
-    }*/
+  /*
+  //Denna loopar ut alla citaten från filen
+  for( var i=0; i < q.length; i++){
+    console.log(q[i].Quote);
+  }*/
 
-    //Tömmer diven för att sedan lägga till den nya citatet i en paragraf i diven
-    $("#quote-output").html("");
-    $("#quote-output").append("<p>" + quote.Quote + "<p>");
-
+  //Tömmer diven för att sedan lägga till den nya citatet i en paragraf i diven
+  $("#quote-output").html("");
+  $("#quote-output").append("<p>" + quote.Quote + "<p>");
 
 });
