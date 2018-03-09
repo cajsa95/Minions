@@ -41,24 +41,6 @@ $("#user-text").on("keyup", function() {
 //sparar input i variabel
 var translated = 'Banana I want a banana';
 
-<<<<<<< HEAD
-//väljer ut Id och vid klick körs speak-funktionen med valda parametrar
-document.getElementById('play').addEventListener("click", function() { responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 }); }, false);
-
-//hämtar quotes i json-filen
-$("#minion-quote").on("click", function(e){
-  console.log("hej");
-
-  $.ajax({
-    url: "quotes.json",
-    contentType: false,
-    dataType: "JSON"
-  }).done(function(data){
-    console.log(data);
-  }).fail(function(data){
-    console.log("hejdå");
-  })
-=======
 document.getElementById('play').addEventListener("click", function() { responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 }); }, false);
 
 //För att få fram ett random citat
@@ -78,7 +60,5 @@ $("#minion-quote").on("click", function() {
   //Tömmer diven för att sedan lägga till den nya citatet i en paragraf i diven
   $("#quote-output").html("");
   $("#quote-output").append("<p>" + quote.Quote + "<p>");
-
->>>>>>> master
 
 });
