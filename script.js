@@ -15,8 +15,13 @@ $("#translate-form").submit(function(e) {
     }).done(function(data) {
         console.log("Funkar");
         $("#translated-text").text(data.contents.translated);
+        //sparar användarens input i varaiabeln
+        var translated = data.contents.translated;
+        console.log(translated);
+        //läser upp användarens input
+        document.getElementById('play').addEventListener("click", function() { responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 }); }, false);
 
-        //console.log(data.contents.translated);
+
 
     }).fail(function(data) {
         console.log("Funkar INTE");
@@ -38,9 +43,6 @@ $("#user-text").on("keyup", function() {
     }
 });
 
-var translated = 'Banana I want a banana';
-
-document.getElementById('play').addEventListener("click", function() { responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 }); }, false);
 
 //För att få fram ett random citat
 $("#minion-quote").on("click", function() {
@@ -59,6 +61,5 @@ $("#minion-quote").on("click", function() {
   //Tömmer diven för att sedan lägga till den nya citatet i en paragraf i diven
   $("#quote-output").html("");
   $("#quote-output").append("<p>" + quote.Quote + "<p>");
-
 
 });
