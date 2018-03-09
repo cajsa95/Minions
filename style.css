@@ -1,29 +1,60 @@
-.container{
-  text-align: center;
+.container {
+    text-align: center;
+    border: 10px solid transparent;
+    border-image: url(./images/banana.png) 15% round;
+    border-image-repeat: repeat;
+    border-radius: 100px;
+    padding: 1%;
+    margin-top: 3%;
+    border-width: 1%;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px 10px grey blur 21px;
 }
 
-.row > div{
-  min-height: 100px;
-  line-height: 100px;
+header {
+    margin: 0px;
+    padding: 1px;
 }
 
-#text-field{
-  text-align: center;
+footer {
+    text-align: center;
+    color: black;
+    background-color: royalblue;
+    padding: 1%;
+    margin: 2px 2px 0px 2px !important;
 }
 
-div.card{
-  border: none;
+footer>img {
+    width: 10%;
+    height: 10%;
 }
 
-div.card > img{
-  cursor: pointer;
+.row>div {
+    min-height: 100px;
+    line-height: 100px;
 }
 
-#minion_speech{
-  float: right;
+#text-field {
+    text-align: center;
 }
 
-#minion_speech > img{
-  width: 50%;
-  height: 20%;
+div.card {
+    border: none;
+}
+
+div.card>img {
+    cursor: pointer;
+}
+
+figure {
+    display: block;
+}
+
+#minion_speech {
+    clear: both;
+}
+
+#minion_speech>img {
+    width: 50%;
+    height: 50%;
 }
