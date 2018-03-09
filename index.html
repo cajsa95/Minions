@@ -11,26 +11,24 @@
 
 <body>
     <div id="all-content" class="container">
+
         <header>
-            <div class="py-5 text center">
-                <!--vad gör py-5-klass egentligen?-->
-                <h1><img src="./images/minion_text.png" height=40% width=40%></h1>
-            </div>
+            <!--<div class="py-5 text center">-->
+            <h1><img src="./images/minion_text.png" height=40% width=40%></h1>
+            <!--</div>-->
         </header>
 
-
-        <div id="main-functions" class="row">
+        <div class="row">
 
             <div class="col-12 col-md-8">
                 <form id="translate-form">
-                    <div class="col" class="form-row" class="form-group">
+                    <div class="col" class="form-group">
                         <input class="form-control" type="text" placeholder="Type here..." id="user-text">
                         <div class="invalid-feedback">BAAANANNAAAA! You need to type some text</div>
                     </div>
                     <button type="submit" class="btn btn-primary md-2">Translate!</button>
+                    <div id="translated-text"></div>
                 </form>
-
-                <div id="translated-text"></div>
 
                 <figure id="minion_speech" style="width: 12em">
                     <img src="./images/minion_speech.png" alt="Minion" class="butt js--triggerAnimation" id="play">
@@ -43,12 +41,13 @@
                 </div>
                 <div id="quote-output"></div>
             </div>
+
         </div>
 
 
         <footer>
             <p>Created by Ylva, Cajsa & Ellinor</p>
-            <img src="./images/2footer_3_minions.png" class="rounded-circle">
+            <img src="./images/2footer_3_minions.png">
         </footer>
     </div>
 

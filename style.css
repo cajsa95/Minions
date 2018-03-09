@@ -1,15 +1,29 @@
 .container {
     text-align: center;
+    background-color: rgb(255, 245, 108);
     border: 10px solid transparent;
-    border-image: url(./images/banana.png) 15% round;
-    border-image-repeat: repeat;
     border-radius: 100px;
     padding: 1%;
-    margin-top: 3%;
+    margin-top: 2%;
+    margin-left: 50px;
+    margin-right: 50px;
     border-width: 1%;
     box-sizing: border-box;
     box-shadow: 10px 10px 10px 10px grey blur 21px;
 }
+
+
+/*
+#function-text {
+    box-sizing: border-box;
+    border: solid 2px;
+    border-color: black;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 5px 5px grey;
+    background-color: white;
+}
+*/
 
 header {
     margin: 0px;
