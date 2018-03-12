@@ -1,57 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>The super cool Minion app</title>
+    <title>The supercool Minion app</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Candal" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
+    <div class="container" id="frame">
 
-    <div class="container">
-        <div class="py-5 text center">
-        </div>
-        <h1>Minion Translator</h1>
+        <header>
+            <!--<div class="py-5 text center">-->
+            <h1>minion translator</h1>
+            <!--</div>-->
+        </header>
+
+        <!---the 2 main functions-->
         <div class="row">
-
-            <div class="col-12 col-md-6 bg-light">
-                <form class="form-row" id="translate-form">
-                    <div class="col">
-                        <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Type here..." id="user-text">
-                            <div class="invalid-feedback">BAAANANNAAAA! You need to type some text</div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-2">Translate!</button>
+            <!---function 1: translate text + speaker-->
+            <div class="col-12 col-md-8 item" id="translate-box">
+                <form id="translate-form">
+                    <!--<div class="col form-group form-row">-->
+                    <input id="user-text" class="form-control col-7" type="text" placeholder="Type here...">
+                    <div class="invalid-feedback">BAAANANNAAAA! You need to type some text</div>
+                    <button type="submit" class="btn btn-primary md-2">Translate!</button>
+                    <div id="translated-text"></div>
                 </form>
-                <div id="translated-text"></div>
 
-                <div class="card" style="width: 12rem" id="minion_speech">
-                    <img src="./images/minion_speech.png" alt="Minion" class="butt js--triggerAnimation" id="play">
-                </div>
+                <figure id="minion_speech" style="width: 12em">
+                    <img src="./images/minion_speech.png" alt="Minion" class="butt js--triggerAnimation press" id="play">
+                </figure>
             </div>
 
-            <div class="col-12 col-md-6">
-                <div class="card" style="width: 18rem">
-                    <img src="https://media.giphy.com/media/10xnQPqLl8ZQac/giphy.gif" alt="Minion" id="minion-quote">
-                </div>
-                <div id="quote-output"></div>
+            <!---function 2: random quote-->
+            <div class="col-12 col-md-4 item" id="quote-box">
+                <!--<div style="width: 18rem">  TEST-->
+                <img src="./images/minion_bubble.gif" alt="Minion blowing bubbles" id="minion-quote" class="press">
+                <div id="quote-output">Press my belly!</div>
             </div>
+
+
+            <footer class="col-12 col-md-12" id="footer">
+                <p>Created by Ylva, Cajsa & Ellinor</p>
+                <img src=" ./images/2footer_3_minions.png">
+                <p>Copyright by Kevin, Bob & Stuart.</p>
+            </footer>
         </div>
-    </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="quotes.js"></script>
-    <script src="script.js"></script>
-
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+        <script src="http://code.responsivevoice.org/responsivevoice.js "></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js "></script>
+        <script src="quotes.js "></script>
+        <script src="script.js "></script>
 </body>
 
 </html>

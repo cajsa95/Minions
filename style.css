@@ -1,29 +1,110 @@
-.container{
-  text-align: center;
+body {
+    margin: 0px;
+    padding: 0px;
 }
 
-.row > div{
-  min-height: 100px;
-  line-height: 100px;
+.container {
+    text-align: center;
+    background-color: rgb(255, 245, 108);
+    border: 10px solid transparent;
+    border-radius: 100px;
+    border-width: 1%;
+    margin: 10px;
 }
 
-#text-field{
-  text-align: center;
+.item {
+    background-color: white;
+    border-style: dotted;
+    border-color: blue;
+    border-radius: 200px;
+    justify-content: center;
 }
 
-div.card{
-  border: none;
+.press {
+    cursor: pointer;
+    justify-content: center;
 }
 
-div.card > img{
-  cursor: pointer;
+#frame {
+    box-shadow: 20px 20px 10px grey;
+    max-width: 1300px;
 }
 
-#minion_speech{
-  float: right;
+header {
+    margin: 0px;
+    padding: 1px;
+    font-family: 'Candal', sans-serif;
 }
 
-#minion_speech > img{
-  width: 50%;
-  height: 20%;
+header>h1 {
+    font-size: 7vw, 7vh;
+}
+
+footer {
+    text-align: center;
+    color: black;
+    display: inline;
+    border-radius: 100px 100px 100px 100px;
+    max-width: 1300px;
+}
+
+footer>img {
+    width: 10%;
+    height: 10%;
+    background-color: grey;
+    border-radius: 100px 100px 100px 100px;
+    border-style: dotted;
+    border-color: rgb(255, 245, 108);
+}
+
+footer>p {
+    display: inline;
+    font-family: 'Candal', sans-serif;
+    font-size: 1vh, 1vw;
+}
+
+#translate-box,
+#quote-box {
+    min-height: 100px;
+    line-height: 100px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 5px;
+    margin-bottom: 50px;
+}
+
+#quote-box {
+    -webkit-box-shadow: 20px 45px 7px 0px rgba(0, 0, 0, 0.45);
+    box-shadow: 20px 45px 7px 0px rgba(0, 0, 0, 0.45);
+}
+
+#translate-box {
+    -webkit-box-shadow: -20px 45px 7px 0px rgba(0, 0, 0, 0.45);
+    box-shadow: -20px 45px 7px 0px rgba(0, 0, 0, 0.45);
+}
+
+#user-text {
+    justify-content: center;
+    margin: 15px auto;
+    display: block;
+    position: relative;
+}
+
+#footer {
+    margin: auto;
+    padding: 5px;
+    justify-content: center;
+    max-width: 75%;
+    display: inline;
+}
+
+#minion_speech {
+    display: block;
+    margin: 0px auto;
+    position: relative;
+}
+
+#minion_speech>img {
+    width: 100px;
+    height: 100px;
 }
