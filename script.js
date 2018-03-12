@@ -3,7 +3,6 @@ $("#translate-form").submit(function(e) {
 
     //hämtar texten som användaren skrivit in och sparar i en variabel
     var userInput = $("#user-text").val();
-
     console.log(userInput);
 
     //översättnings-api:
@@ -19,9 +18,12 @@ $("#translate-form").submit(function(e) {
         var translated = data.contents.translated;
         console.log(translated);
         //läser upp användarens input
-        document.getElementById('play').addEventListener("click", function() { responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 }); }, false);
+        //document.getElementById('play').addEventListener("click", function() { responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 }); }, false);
 
-
+        $("#play").on("click", function(){
+          responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 });
+          translated = "";
+        });
 
     }).fail(function(data) {
         console.log("Översättning funkar INTE");
@@ -32,6 +34,7 @@ $("#translate-form").submit(function(e) {
         $("#user-text").addClass("is-invalid");
         return false;
     };
+
 });
 
 //när användaren börjar skriva i textfältet så ska felmeddelandet försvinna
