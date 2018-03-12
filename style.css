@@ -14,52 +14,73 @@ body {
 
 .item {
     background-color: white;
-    margin-bottom: 15px;
     border-style: dotted;
     border-color: blue;
     border-radius: 200px;
-}
-
-translate-form {
     justify-content: center;
 }
 
-
-/*
-#function-text {
-    box-sizing: border-box;
-    border: solid 2px;
-    border-color: black;
-    padding: 10px;
-    margin: 10px;
-    box-shadow: 5px 5px grey;
-    background-color: white;
+.press {
+    cursor: pointer;
+    justify-content: center;
 }
-*/
+
+#frame {
+    box-shadow: 20px 20px 10px grey;
+    max-width: 1300px;
+}
 
 header {
     margin: 0px;
     padding: 1px;
+    font-family: 'Candal', sans-serif;
+}
+
+header>h1 {
+    font-size: 7vw, 7vh;
 }
 
 footer {
-    width: 100%;
     text-align: center;
     color: black;
-    background-color: royalblue;
-    padding: 0px;
-    margin: 5px 0px 0px 0px !important;
-    justify-content: center;
+    display: inline;
+    border-radius: 100px 100px 100px 100px;
+    max-width: 1300px;
 }
 
 footer>img {
     width: 10%;
     height: 10%;
+    background-color: grey;
+    border-radius: 100px 100px 100px 100px;
+    border-style: dotted;
+    border-color: rgb(255, 245, 108);
 }
 
-.row>div {
+footer>p {
+    display: inline;
+    font-family: 'Candal', sans-serif;
+    font-size: 1vh, 1vw;
+}
+
+#translate-box,
+#quote-box {
     min-height: 100px;
     line-height: 100px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 5px;
+    margin-bottom: 50px;
+}
+
+#quote-box {
+    -webkit-box-shadow: 20px 45px 7px 0px rgba(0, 0, 0, 0.45);
+    box-shadow: 20px 45px 7px 0px rgba(0, 0, 0, 0.45);
+}
+
+#translate-box {
+    -webkit-box-shadow: -20px 45px 7px 0px rgba(0, 0, 0, 0.45);
+    box-shadow: -20px 45px 7px 0px rgba(0, 0, 0, 0.45);
 }
 
 #user-text {
@@ -69,13 +90,12 @@ footer>img {
     position: relative;
 }
 
-div.card {
-    border: none;
-}
-
-.press {
-    cursor: pointer;
+#footer {
+    margin: auto;
+    padding: 5px;
     justify-content: center;
+    max-width: 75%;
+    display: inline;
 }
 
 #minion_speech {

@@ -6,22 +6,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Candal" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="container z-depth-5">
+    <div class="container" id="frame">
 
         <header>
             <!--<div class="py-5 text center">-->
-            <h1><img src="./images/minion_text.png" height=40% width=40%></h1>
+            <h1>minion translator</h1>
             <!--</div>-->
         </header>
 
         <!---the 2 main functions-->
         <div class="row">
             <!---function 1: translate text + speaker-->
-            <div class="col-12 col-md-8 item">
+            <div class="col-12 col-md-8 item" id="translate-box">
                 <form id="translate-form">
                     <!--<div class="col form-group form-row">-->
                     <input id="user-text" class="form-control col-7" type="text" placeholder="Type here...">
@@ -36,30 +37,28 @@
             </div>
 
             <!---function 2: random quote-->
-            <div class="col-12 col-md-4 item">
-                <div style="width: 18rem">
-                    <img src="https://media.giphy.com/media/10xnQPqLl8ZQac/giphy.gif" alt="Minion" id="minion-quote" class="press">
-                </div>
+            <div class="col-12 col-md-4 item" id="quote-box">
+                <!--<div style="width: 18rem">  TEST-->
+                <img src="./images/minion_bubble.gif" alt="Minion blowing bubbles" id="minion-quote" class="press">
                 <div id="quote-output">Press my belly!</div>
             </div>
 
+
+            <footer class="col-12 col-md-12" id="footer">
+                <p>Created by Ylva, Cajsa & Ellinor</p>
+                <img src=" ./images/2footer_3_minions.png">
+                <p>Copyright by Kevin, Bob & Stuart.</p>
+            </footer>
         </div>
 
 
-        <footer>
-            <p>Created by Ylva, Cajsa & Ellinor</p>
-            <img src=" ./images/2footer_3_minions.png ">
-        </footer>
-    </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
-    <script src="http://code.responsivevoice.org/responsivevoice.js "></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js "></script>
-    <script src="quotes.js "></script>
-    <script src="script.js "></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+        <script src="http://code.responsivevoice.org/responsivevoice.js "></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js "></script>
+        <script src="quotes.js "></script>
+        <script src="script.js "></script>
 </body>
 
 </html>
