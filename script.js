@@ -13,7 +13,7 @@ $("#translate-form").submit(function(e) {
         dataType: "JSON"
 
     }).done(function(data) {
-        console.log("Funkar");
+        console.log("Översättning funkar");
         $("#translated-text").text(data.contents.translated);
         //sparar användarens input i varaiabeln
         var translated = data.contents.translated;
@@ -24,7 +24,7 @@ $("#translate-form").submit(function(e) {
 
 
     }).fail(function(data) {
-        console.log("Funkar INTE");
+        console.log("Översättning funkar INTE");
     });
 
     //om användaren inte angivit någon text läggs följande klass för felmeddelande på
@@ -46,20 +46,20 @@ $("#user-text").on("keyup", function() {
 
 //För att få fram ett random citat
 $("#minion-quote").on("click", function() {
-  var q = quotes.Quotes;
+    var q = quotes.Quotes;
 
-  //Denna tar ut ETT random citat ur
-  var quote = q[Object.keys(q)[Math.floor(Math.random()*Object.keys(q).length)]];
-  console.log(quote);
+    //Denna tar ut ETT random citat ur
+    var quote = q[Object.keys(q)[Math.floor(Math.random() * Object.keys(q).length)]];
+    console.log(quote);
 
-  /*
-  //Denna loopar ut alla citaten från filen
-  for( var i=0; i < q.length; i++){
-    console.log(q[i].Quote);
-  }*/
+    /*
+    //Denna loopar ut alla citaten från filen
+    for( var i=0; i < q.length; i++){
+      console.log(q[i].Quote);
+    }*/
 
-  //Tömmer diven för att sedan lägga till den nya citatet i en paragraf i diven
-  $("#quote-output").html("");
-  $("#quote-output").append("<p>" + quote.Quote + "<p>");
+    //Tömmer diven för att sedan lägga till den nya citatet i en paragraf i diven
+    $("#quote-output").html("");
+    $("#quote-output").append("<p>" + quote.Quote + "<p>");
 
 });

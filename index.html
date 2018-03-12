@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>The super cool Minion app</title>
+    <title>The supercool Minion app</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -10,38 +10,48 @@
 </head>
 
 <body>
+    <div id="all-content" class="container">
+        <header>
+            <div class="py-5 text center">
+                <!--vad gör py-5-klass egentligen?-->
+                <h1><img src="./images/minion_text.png" height=40% width=40%></h1>
+            </div>
+        </header>
 
-    <div class="container">
-        <div class="py-5 text center">
-        </div>
-        <h1>Minion Translator</h1>
-        <div class="row">
 
-            <div class="col-12 col-md-6 bg-light">
-                <form class="form-row" id="translate-form">
-                    <div class="col">
-                        <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Type here..." id="user-text">
-                            <div class="invalid-feedback">BAAANANNAAAA! You need to type some text</div>
-                        </div>
+        <div id="main-functions" class="row">
+
+            <div class="col-12 col-md-8">
+                <form id="translate-form">
+                    <div class="col" class="form-row" class="form-group">
+                        <input class="form-control" type="text" placeholder="Type here..." id="user-text">
+                        <div class="invalid-feedback">BAAANANNAAAA! You need to type some text</div>
                     </div>
-                    <button type="submit" class="btn btn-primary mb-2">Translate!</button>
+                    <button type="submit" class="btn btn-primary md-2">Translate!</button>
                 </form>
+
                 <div id="translated-text"></div>
 
-                <div class="card" style="width: 12rem" id="minion_speech">
+                <figure id="minion_speech" style="width: 12em">
                     <img src="./images/minion_speech.png" alt="Minion" class="butt js--triggerAnimation" id="play">
-                </div>
+                </figure>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
                 <div class="card" style="width: 18rem">
                     <img src="https://media.giphy.com/media/10xnQPqLl8ZQac/giphy.gif" alt="Minion" id="minion-quote">
                 </div>
                 <div id="quote-output"></div>
             </div>
         </div>
+
+
+        <footer>
+            <p>Created by Ylva, Cajsa & Ellinor</p>
+            <img src="./images/2footer_3_minions.png" class="rounded-circle">
+        </footer>
     </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -51,7 +61,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="quotes.js"></script>
     <script src="script.js"></script>
-
 </body>
 
 </html>
