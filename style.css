@@ -1,13 +1,15 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
 .container {
-    width: 100%;
     text-align: center;
     background-color: rgb(255, 245, 108);
     border: 10px solid transparent;
     border-radius: 100px;
-    padding: 1%;
-    margin-top: 2%;
     border-width: 1%;
-    box-shadow: 10px 10px 10px 10px grey blur 21px;
+    margin: 10px;
 }
 
 .item {
@@ -41,11 +43,13 @@ header {
 }
 
 footer {
+    width: 100%;
     text-align: center;
     color: black;
     background-color: royalblue;
-    padding: 1%;
-    margin: 2px 2px 0px 2px !important;
+    padding: 0px;
+    margin: 5px 0px 0px 0px !important;
+    justify-content: center;
 }
 
 footer>img {
