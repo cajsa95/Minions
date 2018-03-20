@@ -13,6 +13,7 @@ $("#translate-form").submit(function(e) {
 
     }).done(function(data) {
         console.log("Översättning funkar");
+
         $("#translated-text").text(data.contents.translated);
         //sparar användarens input i varaiabeln
         var translated = data.contents.translated;
@@ -20,10 +21,11 @@ $("#translate-form").submit(function(e) {
         //läser upp användarens input
         //document.getElementById('play').addEventListener("click", function() { responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 }); }, false);
 
-        $("#play").on("click", function(){
-          responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 });
-          translated = "";
+        $("#play").on("click", function() {
+            responsiveVoice.speak(translated, "Indonesian Female", { pitch: 1.7 }, { volume: 1 });
+            translated = "";
         });
+
 
     }).fail(function(data) {
         console.log("Översättning funkar INTE");
